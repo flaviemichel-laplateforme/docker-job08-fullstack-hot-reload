@@ -1,0 +1,25 @@
+# Dépendances (Le plus important !)
+node_modules
+npm-debug.log
+
+# Fichiers de variables d'environnement (Sécurité)
+.env
+.env.*
+
+# Fichiers Git
+.git
+.gitignore
+
+# Fichiers de build (générés par Vite ou TypeScript)
+dist
+build
+out
+
+# Fichiers Docker (inutile de copier le docker-compose ou le dockerignore dans l'image)
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Documentation et logs
+README.md
+*.log
