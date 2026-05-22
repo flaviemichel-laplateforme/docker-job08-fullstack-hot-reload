@@ -1,8 +1,12 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const mysql = require('mysql2');
 
 const app = express();
+
+app.use(cors());
+
 const PORT = 3000;
 
 // Configuration de la connexion (les valeurs viennent du docker-compose qui lit le .env)

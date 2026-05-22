@@ -33,7 +33,7 @@ services:
       - "3000:3000"
     environment: 
       DB_HOST: db
-      DBL_USER: ${DB_USER}
+      DB_USER: ${DB_USER}
       DB_PASSWORD: ${DB_PASSWORD}
       DB_DATABASE:  ${DB_DATABASE}
     volumes: 
@@ -42,11 +42,15 @@ services:
 
     command: sh -c "npm install && npm run dev"
 
+    depends_on:
+      db:
+        condition: service_healthy
+
     networks: 
       - fullstack-network
 
   frontend:
-    image: node:18-alpine
+    image: node:20-alpine
     working_dir: /app
     
     ports:
