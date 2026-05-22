@@ -30,6 +30,6 @@ app.get('/db-test', (req, res) => {
     });
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Backend connecté sur le port ${PORT}`);
 });
